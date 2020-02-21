@@ -2,7 +2,7 @@
 	<main class="content" role="main">
     {{ $pages := .Pages }}
     {{ if .IsHome }}
-      {{ $pages = where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ $pages = where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.preview" "!=" true }}
     {{ end }}
     {{ $paginator := .Paginate $pages }}
     <div class="extra-pagination">
