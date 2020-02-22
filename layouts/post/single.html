@@ -12,7 +12,12 @@
       </section>
     </header>
     <section class="post-content">
-      {{ .Content }}
+      <!-- {{ .Content }} -->
+			{{- with .Content -}}
+			<div>
+				{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
+			</div>
+			{{- end -}}
     </section>
     <footer class="post-footer">
       {{ with .Params.tags -}}

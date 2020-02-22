@@ -32,6 +32,10 @@
     <script type="text/javascript">
         $.bigfoot();
     </script>
+
+		<!-- -->
+		<link rel="stylesheet" type="text/css" href="{{ "assets/css/anchors.css" | relURL }}">
+
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
