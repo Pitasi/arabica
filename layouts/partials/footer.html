@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <section class="rss"><a class="subscribe-button icon-feed" href="/index.xml"></a></section>
-  {{ with .Site.Params.twitter }}<section class="twitter"><a class="icon-twitter" href="https://twitter.com/{{ . }}"> {{ . }}</a></section>{{ end }}
-  {{ with .Site.Params.facebook }}<section class="facebook"><a class="icon-facebook" href="https://www.facebook.com/{{ . }}"> {{ . }}</a></section>{{ end }}
+  {{ with .Site.Params.github }}<section class="linkedin"><a class="icon-github" href="https://www.github.com/{{ . }}"> {{ . }}</a></section>{{ end }}
+  {{ with .Site.Params.linkedin }}<section class="linkedin"><a class="icon-linkedin" href="https://www.linkedin.com/in/{{ . }}"> {{ . }}</a></section>{{ end }}
   <section class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Title }}</section>
 </footer>
 <!-- custom js -->
