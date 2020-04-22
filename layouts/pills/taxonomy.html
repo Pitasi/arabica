@@ -1,0 +1,11 @@
+{{ define "body_class" }}tag-template{{ end }}
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+<main class="content" role="main">
+   <h1>{{ .Title }}</h1>
+   <!-- ranges through each of the content files associated with a particular taxonomy term and renders the summary.html content view -->
+    {{ range .Pages }}
+        {{ .Render "single"}}
+    {{ end }}
+</main>
+{{ end }}
