@@ -1,10 +1,12 @@
 <article class="post">
-	<header class="post-header">
-    {{ with .Params.image }}
-      <img src="{{ . }}"></img>
-    {{ end }}
-		<h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-	</header>
+	<a href="{{ .RelPermalink }}">
+		<header class="post-header">
+			{{ with .Params.image }}
+				<img src="{{ . }}"></img>
+			{{ end }}
+			<h2 class="post-title">{{ .Title }}</h2>
+		</header>
+	</a>
 	<section class="post-excerpt">
     <p>
       {{ .Summary }} &hellip; <a class="read-more" href="{{ .RelPermalink }}">&raquo;</a>
